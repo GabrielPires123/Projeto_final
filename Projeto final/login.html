@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css-20230621T191432Z-001/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css-20230621T191432Z-001/css/style.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <div class="container">
+    
+    <!--Form login-->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center mb-4"><a href="home.html">LOGIN</a></h5>
+            <form name="form1">
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" name="txUsuario" maxlength="25">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-lock" viewBox="0 0 16 16">
+                      <path
+                        d="M2.5 6V5a3.5 3.5 0 0 1 7 0v1a.5.5 0 0 0 1 0v-1A4.5 4.5 0 0 0 2.5 5v1a.5.5 0 0 0-1 0zm1 0V5A2.5 2.5 0 0 1 7 5v1a.5.5 0 0 0 1 0V5a2.5 2.5 0 0 1 4.5 0v1a.5.5 0 0 0 1 0v-1A3.5 3.5 0 0 0 3.5 5v1a.5.5 0 0 0-1 0zM4 9a3 3 0 0 1 6 0v3a3 3 0 0 1-6 0V9zm1 0a2 2 0 0 1 4 0v3a2 2 0 0 1-4 0V9z" />
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control" name="txSenha" maxlength="10">
+                </div>
+                <a class="nav-link text-primary" data-bs-toggle="modal" data-bs-target="#cadastrarCliente">Cadastro</a>
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button" onclick="btnLogar()">Entrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Cadastrar-->
+  <div class="modal fade" id="cadastrarCliente" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <form class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document" id="formCad">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Cadastro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="alerta"></div>
+          <form class="was-validated" novalidate="">
+            <div class="mb-3">
+              <label for="nome">Nome completo</label>
+              <input required type="text" class="form-control" id="nome" name="nome">
+            </div>
+            <div class="mb-3">
+              <label for="pais">País</label>
+              <select class="form-control" id="pais" required>
+                <option value="" selected>...</option>
+                <option value="São Paulo">Brasil</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="estado"> Escolha o Estado</label>
+              <select class="form-control" id="estado" required>
+                <option value="" selected>Escolha o Estado</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AM">AM</option>
+                <option value="AP">AP</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MG">MG</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="PR">PR</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="RS">RS</option>
+                <option value="SC">SC</option>
+                <option value="SE">SE</option>
+                <option value="SP">SP</option>
+                <option value="TO">TO</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="nome">Senha</label>
+              <input required type="text" class="form-control" id="senha" name="senha">
+            </div>
+            <div class="mb-3">
+              <label for="nome">Confirmação</label>
+              <input required type="text" class="form-control" id="senha2" name="senha2">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+    </form>
+
+    <script src="js-20230621T191435Z-001/js/bootstrap.bundle.js"></script>
+    <script src="js-20230621T191435Z-001/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

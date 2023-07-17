@@ -1,0 +1,84 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(105,83,138);
+    background: linear-gradient(90deg, #69538a 0%, #d65252 49%, #eca05c 100%);
+  
+}
+.header1{
+    background: rgb(105,83,138);
+    background: linear-gradient(90deg, rgb(105, 83, 138) 0%, rgba(214,82,82,1) 49%, rgba(236,160,92,1) 100%);
+}
+ul{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#Nav1 a:hover{
+    transition: 0.3s linear;
+    font-size: 1.6rem;
+    background: rgb(238,164,95);
+    background: linear-gradient(90deg, rgba(238,164,95,0.39539565826330536) 0%, rgba(85,106,140,0.7315301120448179) 0%);
+    border-radius: 1rem; 
+}
+#Nav2 a:hover{
+    transition: 0.3s linear;
+    font-size: 1.6rem;
+    background: rgb(238,164,95);
+    background: linear-gradient(90deg, rgba(238,164,95,0.39539565826330536) 0%, rgba(85,106,140,0.7315301120448179) 0%);
+    border-radius: 1rem; 
+}
+#segundaTela{
+  margin-top: 10rem;
+  background-color: black;
+  padding: 5rem;
+}
+#terceiraTela{
+    background-color: black;
+}
+#Nav2{
+    text-decoration:nome; 
+    font-size: 1.3rem;
+}
+#navbarNav{
+    font-size: 1.3rem;
+}
+#accordionFlushExample{
+    
+    justify-content: end;
+}
+#text-center-2tela{
+    margin-top: 10rem;
+}
+#quartaTela{
+    background-color: black;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.rainbow {
+	background-color: #ffff;
+	padding: 2rem;
+	box-shadow: 23px 17px 23px -4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 23px 17px 23px -4px rgba(0,0,0,0.62);
+    box-shadow: 23px 17px 23px -4px rgba(0,0,0,0.62);
+}
+#Planos{
+    transform: rotate(270deg);
+}
+
+@media (max-width: 767px)
+{
+    #quartaTela
+   {
+    height: 80rem;
+   
+   }
+   h2{
+    font-size: 1rem;
+   }
+}
+
